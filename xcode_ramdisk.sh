@@ -14,10 +14,10 @@ DEV_IPHONE_DIR="/Users/$USERNAME/Library/Application Support/iPhone Simulator"
 SYS_CACHES_DIR="/Library/Caches" # this must laster than USER_CACHES_DIR...
 
 # Create folder if not exists
-mkdir -p "$USER_CACHES_DIR"
-mkdir -p "$DEV_CACHES_DIR"
-mkdir -p "$DEV_IPHONE_DIR"
-mkdir -p "$SYS_CACHES_DIR"
+mkdir -p -m 0777 "$USER_CACHES_DIR"
+mkdir -p -m 0777 "$DEV_CACHES_DIR"
+mkdir -p -m 0777 "$DEV_IPHONE_DIR"
+mkdir -p -m 0777 "$SYS_CACHES_DIR"
 
 RAMDisk() {
 	mntpt="$1"
