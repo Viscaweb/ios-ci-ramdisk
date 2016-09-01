@@ -57,12 +57,12 @@ test -r /etc/rc.common || exit 1
 StartService () {
 	ConsoleMessage "Starting RamFS disks..."
 
-	RAMDisk "$TMP_DIR" 128
-	RAMDisk "$RUN_DIR" 64
-	RAMDisk "$SYS_CACHES_DIR" 64
-	RAMDisk "$USER_CACHES_DIR" 1024
-	RAMDisk "$DEV_CACHES_DIR" 1024
-	RAMDisk "$DEV_IPHONE_DIR" 1024
+	RAMDisk "$TMP_DIR" 64
+	RAMDisk "$RUN_DIR" 32
+	RAMDisk "$SYS_CACHES_DIR" 32
+	RAMDisk "$USER_CACHES_DIR" 128
+	RAMDisk "$DEV_CACHES_DIR" 750
+	RAMDisk "$DEV_IPHONE_DIR" 256
 
 	#RAMDisk /var/db 1024
 	#mkdir -m 1777 /var/db/mds
